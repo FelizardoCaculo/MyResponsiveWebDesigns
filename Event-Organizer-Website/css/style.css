@@ -1,6 +1,5 @@
 :root {
     --main-color: #3867d6;
-
 }
 
 * {
@@ -39,6 +38,26 @@ body {
     background: #222;
 }
 
+section {
+    padding: 2rem 9%;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    background: #666;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: var(--main-color);
+}
+
 .header {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -62,7 +81,7 @@ body {
 
 .header .navbar a {
     font-size: 1.7rem;
-    color: white;
+    color: #fff;
     margin-left: 2rem;
 }
 
@@ -76,6 +95,39 @@ body {
     cursor: pointer;
     display: none;
 }
+
+
+.home .content{
+    text-align: center;
+    padding-top: 6rem;
+    margin: 2rem auto;
+    max-width: 70rem;
+}
+
+.home .content h3 {
+    color: #fff;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+.home .content h3 span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.home .home-slider .swiper-slide {
+    overflow: hidden;
+    border-radius: .5rem;
+    height: 50rem;
+    width: 35rem;
+}
+
+.home .home-slider .swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 
 
 
@@ -141,6 +193,10 @@ body {
         font-size: 2rem;
     }
 
+    .home .content h3 {
+        font-size: 4rem;
+    }
+
 }
 
 /*  media queries  */
@@ -148,6 +204,10 @@ body {
 
     html {
         font-size: 50%;
+    }
+
+    .home .home-slider .swiper-slide {
+        width: 27rem;
     }
 
 }
