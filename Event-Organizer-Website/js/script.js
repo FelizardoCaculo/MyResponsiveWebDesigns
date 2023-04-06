@@ -1,5 +1,5 @@
-let menu = document.querySelector('#menu-bars');
-let navbar = document.querySelector('.navbar');
+const menu = document.querySelector('#menu-bars');
+const navbar = document.querySelector('.navbar');
 
 menu.onclick = () => {
     menu.classList.toggle('fa-times');
@@ -18,7 +18,7 @@ var swiper = new Swiper(".home-slider", {
     centeredSlides: true,
     slidesPerView: "auto",
     coverflowEffect: {
-      rotate: 0,
+      rotate: 20,
       stretch: 0,
       depth: 100,
       modifier: 2,
@@ -30,4 +30,26 @@ var swiper = new Swiper(".home-slider", {
         disableOnIteration: false,
     }
 
-  });
+});
+
+var swiper = new Swiper(".review-slider", {
+    slidesPerView: 1,
+    grabCursor: true,
+    loop:true,
+    spaceBetween: 10,
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        700: {
+            slidesPerView: 2,
+        },
+        1050: {
+            slidesPerView: 3,
+        },
+    },
+    autoplay: {
+        delay: 5000,
+        disableOnIteration: false,
+    }
+});
