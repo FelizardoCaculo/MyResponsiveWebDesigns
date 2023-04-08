@@ -1,17 +1,13 @@
 const menu = document.querySelector('#menu-bars');
 const navbar = document.querySelector('.navbar');
-
 menu.onclick = () => {
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
 }
-
 window.onscroll = () => {
     menu.classList.remove('fa-times');
     navbar.classList.toggle('active');
 }
-
-
 var swiper = new Swiper(".home-slider", {
     effect: "coverflow",
     grabCursor: true,
@@ -29,9 +25,7 @@ var swiper = new Swiper(".home-slider", {
         delay: 3000,
         disableOnIteration: false,
     }
-
 });
-
 var swiper = new Swiper(".review-slider", {
     slidesPerView: 1,
     grabCursor: true,
