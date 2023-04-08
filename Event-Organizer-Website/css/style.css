@@ -345,7 +345,7 @@ section {
 /* 👇👇👇👇👇  media queries 👇👇👇👇👇 */
 @media (max-width: 991px) {
     html {
-        font-size: 55%;
+        font-size: 58%;
         overflow-x: auto;
     }
     .header {
@@ -384,7 +384,7 @@ section {
 /*  👇👇👇👇👇 media queries 👇👇👇👇👇 */
 @media (max-width: 450px) {
     html {
-        font-size: 50%;
+        font-size: 55%;
     }
     .home .home-slider .swiper-slide {
         width: 27rem;
