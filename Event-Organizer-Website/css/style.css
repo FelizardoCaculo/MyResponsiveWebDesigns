@@ -13,7 +13,7 @@
     transition: .2s linear;
 }
 html {
-    font-size: 62.5%;
+    font-size: 82.5%;
     overflow: auto;
     scroll-padding-top: 7rem;
     scroll-behavior: smooth;
@@ -345,7 +345,7 @@ section {
 /* 👇👇👇👇👇  media queries 👇👇👇👇👇 */
 @media (max-width: 991px) {
     html {
-        font-size: 58%;
+        font-size: 68%;
         overflow-x: auto;
     }
     .header {
@@ -384,7 +384,7 @@ section {
 /*  👇👇👇👇👇 media queries 👇👇👇👇👇 */
 @media (max-width: 450px) {
     html {
-        font-size: 55%;
+        font-size: 62%;
     }
     .home .home-slider .swiper-slide {
         width: 27rem;
