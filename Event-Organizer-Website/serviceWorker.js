@@ -3,7 +3,7 @@ const assets = [
     "/",
     "/index.html",
     "/css/style.css",
-    "/js/script.js",
+    "/js/app.js",
     "/images/about-img.jpg",
     "/images/g-1.jpg",
     "/images/g-2.jpg",
@@ -35,13 +35,13 @@ const assets = [
     "/images/icons/icon-512x512.png",
 ]
 
-function createCache() {
-    caches.open(staticEventOrganizerWebsite).then(cache => {
-        cache.addAll(assets)
-    })
-}
-
-createCache();
+self.addEventListener("install", installEvent => {
+    installEvent.waitUntil(
+        caches.open(staticEventOrganizerWebsite).then(cache => {
+            cache.addAll(assets)
+        })
+    )
+})
 
 self.addEventListener("fetch", fetchEvent => {
     fetchEvent.respondWith(
