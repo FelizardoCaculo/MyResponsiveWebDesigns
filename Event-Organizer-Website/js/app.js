@@ -6,8 +6,18 @@ menu.onclick = () => {
 }
 window.onscroll = () => {
     menu.classList.remove('fa-times');
-    navbar.classList.toggle('active');
+    navbar.classList.remove('active');
 }
+
+if("ServiceWorker" in navigator) {
+    window.addEventListener("load", function() {
+        navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then(res => console.log("Service Worker registered"))
+            .catch(err => console.log("Service Worker not registered", err))
+    })
+}
+
 var swiper = new Swiper(".home-slider", {
     effect: "coverflow",
     grabCursor: true,
