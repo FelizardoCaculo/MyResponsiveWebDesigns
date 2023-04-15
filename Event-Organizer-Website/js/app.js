@@ -2,9 +2,10 @@ const menu = document.querySelector('#menu-bars');
 const navbar = document.querySelector('.navbar');
 let themeToggler = document.querySelector('.theme-toggler');
 let toggleBtn = document.querySelector('.toggle-btn');
-toggleBtn.onclick = () => {
+/*toggleBtn.onclick = () => {
     themeToggler.classList.toggle('active');
 }
+*/
 document.querySelectorAll('.theme-toggler .theme-btn').forEach(btn => {
     btn.onclick = () => {
         let color = btn.style.background;
@@ -18,7 +19,7 @@ menu.onclick = () => {
 window.onscroll = () => {
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
-    themeToggler.classList.remove('active');
+    //themeToggler.classList.remove('active');
 }
 if("ServiceWorker" in navigator) {
     window.addEventListener("load", function() {
