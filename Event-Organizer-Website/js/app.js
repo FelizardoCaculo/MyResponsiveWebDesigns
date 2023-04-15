@@ -1,5 +1,16 @@
 const menu = document.querySelector('#menu-bars');
 const navbar = document.querySelector('.navbar');
+let themeToggler = document.querySelector('.theme-toggler');
+let toggleBtn = document.querySelector('.toggle-btn');
+toggleBtn.onclick = () => {
+    themeToggler.classList.toggle('active');
+}
+document.querySelectorAll('.theme-toggler .theme-btn').forEach(btn => {
+    btn.onclick = () => {
+        let color = btn.style.background;
+        document.querySelector(':root').style.setProperty('--main-color', color);
+    }
+})
 menu.onclick = () => {
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
@@ -7,8 +18,8 @@ menu.onclick = () => {
 window.onscroll = () => {
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
+    themeToggler.classList.remove('active');
 }
-
 if("ServiceWorker" in navigator) {
     window.addEventListener("load", function() {
         navigator.serviceWorker
@@ -17,7 +28,6 @@ if("ServiceWorker" in navigator) {
             .catch(err => console.log("Service Worker not registered", err))
     })
 }
-
 var swiper = new Swiper(".home-slider", {
     effect: "coverflow",
     grabCursor: true,
